@@ -27,8 +27,11 @@ class MyViewController: UIViewController {
     }
     
     @objc func click() {
-        CTMediator.sharedInstance().hotelViewController { (str) in
+        let vc = CTMediator.sharedInstance().hotelViewController { (str) in
             print(str ?? "hoteldd")
+        }
+        if let vc = vc {
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 
