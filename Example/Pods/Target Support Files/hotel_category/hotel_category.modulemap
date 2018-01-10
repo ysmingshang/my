@@ -1,0 +1,6 @@
+framework module hotel_category {
+  umbrella header "hotel_category-umbrella.h"
+
+  export *
+  module * { export * }
+}

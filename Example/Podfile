@@ -2,7 +2,9 @@ use_frameworks!
 
 target 'my_Example' do
   pod 'my', :path => '../'
-
+  
+  pod 'hotel_category', :path =>'/Users/Mikey/Desktop/Git/mingshang/hotel_category'
+  
   target 'my_Tests' do
     inherit! :search_paths
 

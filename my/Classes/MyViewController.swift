@@ -6,6 +6,8 @@
 //
 
 import UIKit
+//import CTMediator
+import hotel_category
 
 class MyViewController: UIViewController {
 
@@ -15,6 +17,19 @@ class MyViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         view.backgroundColor = .red
+        
+        let btn = UIButton(frame: CGRect(x: 10, y: 100, width: 100, height: 40))
+        btn.backgroundColor = .blue
+        view.addSubview(btn)
+        btn.addTarget(self, action: #selector(click), for: .touchUpInside)
+        
+        
+    }
+    
+    @objc func click() {
+        CTMediator.sharedInstance().hotelViewController { (str) in
+            print(str ?? "hoteldd")
+        }
     }
 
     override func didReceiveMemoryWarning() {
